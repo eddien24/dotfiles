@@ -18,8 +18,8 @@ If everything works, remove `bashrc.bak`
 ## Applications
 
 ### Neovim
-- If package manager is not up to date (need at least v10.0): 
-- [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
+- If package manager is not up to date (need at least v10.0):
+    [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
 Lazy should bootstrap everything else.
 
