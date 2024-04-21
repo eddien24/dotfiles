@@ -120,3 +120,9 @@ fi
 # starship
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
+
+# cargo
+. "$HOME/.cargo/env"
+
+# alacritty completion
+source /home/edball24/alacritty/extra/completions/alacritty.bash

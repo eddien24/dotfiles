@@ -1,5 +1,3 @@
-# DOTFILES
-
 ## Requirements
 - Git
 - GNU Stow
@@ -45,3 +43,6 @@ Use `<prefix>-I` when inside of `tmux` to install packages.
 ```
 curl -sS https://starship.rs/install.sh | sh
 ```
+
+### Alacritty
+[Build from source](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
