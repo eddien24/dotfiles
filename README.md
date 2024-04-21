@@ -7,6 +7,8 @@
 ## Installation
 ```
 git clone git@github.com:eddien24/dotfiles.git ~/.dotfiles
+cd .dotfiles
+stow .
 ```
 
 ## Applications
