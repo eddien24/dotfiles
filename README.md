@@ -20,8 +20,7 @@ If everything works, remove `bashrc.bak`
 ### Neovim
 - If package manager is not up to date (need at least v10.0):
     [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
-
-Lazy should bootstrap everything else.
+- Lazy should bootstrap everything else.
 
 ### Tmux
 - If package manager is not up to date (need at least v3.1):
