@@ -5,11 +5,15 @@
 - GNU Stow
 
 ## Installation
+
 ```
+cd ~
+mv .bashrc bashrc.bak
 git clone git@github.com:eddien24/dotfiles.git ~/.dotfiles
 cd .dotfiles
 stow .
 ```
+If everything works, remove `bashrc.bak`
 
 ## Applications
 
