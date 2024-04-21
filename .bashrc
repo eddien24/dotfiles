@@ -115,6 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# tmux path variables
-LD_LIBRARY_PATH = $HOME/local/lib $HOME/local/bin/tmux -V
