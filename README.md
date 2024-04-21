@@ -40,3 +40,8 @@ git submodule update
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 Use `<prefix>-I` when inside of `tmux` to install packages.
+
+### Starship
+```
+curl -sS https://starship.rs/install.sh | sh
+```
