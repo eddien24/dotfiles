@@ -18,6 +18,13 @@ If everything works, remove `bashrc.bak`
 ## Applications
 
 ### Neovim
+#### Config
+Ensure that the submodule is installed. If not, update submodules 
+in `.dotfiles/.config/nvim`
+```
+git submodule init
+git submodule update
+```
 - If package manager is not up to date (need at least v10.0):
     [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
 - Lazy should bootstrap everything else.
