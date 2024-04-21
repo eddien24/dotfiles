@@ -23,7 +23,7 @@ If everything works, remove `bashrc.bak`
 - Lazy should bootstrap everything else.
 
 ### Tmux
-- If package manager is not up to date (need at least v3.1):
+- If package manager is not up to date (need at least v3.4):
 [Build from source](https://github.com/tmux/tmux?tab=readme-ov-file#welcome-to-tmux)
 - Building dependencies: `libevent` and `ncurses` via package manager
     (might be called `libevent_dev` and `ncurses_dev`)
