@@ -65,3 +65,7 @@ eval "$(zoxide init --cmd cd bash)"
 alias ls='eza --color=always --git --no-filesize --no-user --no-time --icons=always --long --no-permissions'
 alias la='eza --color=always --git --no-filesize --no-user --no-time --icons=always --long --all'
 alias tree='eza --tree'
+
+# Set up fzf key bindings and fuzzy completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(fzf --bash)"
