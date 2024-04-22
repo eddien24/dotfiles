@@ -46,3 +46,14 @@ curl -sS https://starship.rs/install.sh | sh
 
 ### Alacritty
 [Build from source](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
+
+### Zoxide
+```
+cd ~
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+```
+
+### EZA
+```
+cargo install eza
+```
