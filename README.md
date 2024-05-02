@@ -24,6 +24,13 @@ git submodule update
 ```
 [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
+#### LSP
+- clangd: package manager
+- rust-analyzer
+```
+rustup component add rust-analyzer
+```
+
 ### Tmux
 [Build from source](https://github.com/tmux/tmux?tab=readme-ov-file#welcome-to-tmux)
 - Building dependencies: `libevent` and `ncurses` via package manager

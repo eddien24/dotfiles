@@ -55,7 +55,7 @@ export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
 . "$HOME/.cargo/env"
 
 # alacritty completion
-source /home/edball24/alacritty/extra/completions/alacritty.bash
+source /home/edball24/Documents/alacritty/extra/completions/alacritty.bash
 
 # zoxide 
 eval "$(zoxide init --cmd cd bash)"
