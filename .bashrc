@@ -47,6 +47,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # nvim alias
 alias n='nvim'
 
+# less alias
+alias less='less -R'
+
 # starship
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
