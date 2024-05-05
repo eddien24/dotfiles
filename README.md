@@ -14,6 +14,10 @@ stow .
 If everything works, remove `bashrc.bak`
 
 ## Applications
+Install dependencies then run the install script!
+```
+sh start.sh
+```
 
 ### Neovim
 [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
