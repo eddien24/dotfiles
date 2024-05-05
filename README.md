@@ -7,7 +7,7 @@
 ```
 cd ~
 mv .bashrc bashrc.bak
-git clone git@github.com:eddien24/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules git@github.com:eddien24/dotfiles.git ~/.dotfiles
 cd .dotfiles
 stow .
 ```
@@ -16,12 +16,6 @@ If everything works, remove `bashrc.bak`
 ## Applications
 
 ### Neovim
-Ensure that the submodule is installed. If not, update submodules 
-in `.dotfiles/.config/nvim`
-```
-git submodule init
-git submodule update
-```
 [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
 ### Tmux
