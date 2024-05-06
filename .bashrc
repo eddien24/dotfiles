@@ -50,6 +50,9 @@ alias n='nvim'
 # less alias
 alias less='less -R'
 
+# ripgrep alias
+alias grep=rg
+
 # starship
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
