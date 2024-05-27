@@ -19,6 +19,9 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# ignore commands in history
+HISTIGNORE="clear:rm *"
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -74,3 +77,8 @@ alias tree='eza --tree'
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(fzf --bash)"
+
+# mkdir & cd function
+function mk {
+    command mkdir $1 && cd $1
+}
