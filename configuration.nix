@@ -1,14 +1,15 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    /etc/nixos/hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -82,12 +83,12 @@
   users.users.eddie = {
     isNormalUser = true;
     description = "Eddie";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
-  
+
   # Touchpad settings
   services.xserver.libinput.touchpad = {
     naturalScrolling = false;
@@ -95,10 +96,10 @@
   };
 
   # Adjust brightness
-  boot.kernelParams = [ 
+  boot.kernelParams = [
     "acpi_backlight=native"
-    "i915.enable_dpcd_backlight=3"    
-   ];
+    "i915.enable_dpcd_backlight=3"
+  ];
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -107,38 +108,41 @@
   # $ nix search wget
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    # Mandatory tools
     vim
-    wget
     git
     neovim
     tmux
+    stow
+    unzip
+    wget
+
+    # Fun CLI things
     starship
     zoxide
     fzf
     eza
     ripgrep
+    libnotify
+
+    # Programming tools
     cargo
     rustc
     rustfmt
-    stow
-    cmake
-    discord
-    fprintd
     gcc
-    unzip
-    libnotify
+    cmake
     alejandra
-  ];
 
-  # Enable fingerprints 
-  services.fprintd.enable = true;
-  security.pam.services.login.fprintAuth = true;
+    # Miscellaneous
+    discord
+    spotify
+  ];
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraMono" ]; })
+    (nerdfonts.override {fonts = ["FiraMono"];})
   ];
 
-  fonts.fontconfig.defaultFonts.monospace = [ "FiraMono" ];
+  fonts.fontconfig.defaultFonts.monospace = ["FiraMono"];
 
   # Garbage collection
   nix.gc = {
