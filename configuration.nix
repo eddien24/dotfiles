@@ -136,6 +136,7 @@
     # Miscellaneous
     discord
     spotify
+    zoom-us
   ];
 
   fonts.packages = with pkgs; [
