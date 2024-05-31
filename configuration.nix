@@ -130,6 +130,7 @@
   ];
 
   services.fprintd.enable = true;
+  security.pam.services.login.fprintAuth = true;
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraMono" ]; })
