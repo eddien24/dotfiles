@@ -7,8 +7,8 @@
   ...
 }: {
   imports = [
-    # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
+
     ./modules/auto.nix
     ./modules/set.nix
     ./modules/pkg.nix
