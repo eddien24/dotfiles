@@ -127,8 +127,10 @@
     gcc
     unzip
     libnotify
+    alejandra
   ];
 
+  # Enable fingerprints 
   services.fprintd.enable = true;
   security.pam.services.login.fprintAuth = true;
 
@@ -137,6 +139,13 @@
   ];
 
   fonts.fontconfig.defaultFonts.monospace = [ "FiraMono" ];
+
+  # Garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-generations +5";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
