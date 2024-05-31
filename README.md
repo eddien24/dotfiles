@@ -16,7 +16,7 @@ If everything works, remove `bashrc.bak`
 ## NixOS
 Manual symlink necessary for `configuration.nix`
 ```
-ln -s ~/.dotfiles/configuration.nix /etc/nixos/configuration.nix
+sudo ln -s ~/.dotfiles/nixos/configuration.nix /etc/nixos/configuration.nix
 ```
 
 ## Applications

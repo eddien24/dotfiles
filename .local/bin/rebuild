@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 
 set -e
-pushd ~/.dotfiles
-nvim configuration.nix
+pushd ~/.dotfiles/nixos
+nvim .
 
 # Autoformat
-alejandra configuration.nix
+alejandra .
 
 # Early return if nothing changed
-if git diff --quiet '*.nix'; then
+if git diff --quiet .; then
     echo "No changes detected, exiting."
     popd
     exit 0
 fi
 
 # Show changes
-git diff -U0 '*.nix'
+git diff -U0 .
 
 echo "NixOS Rebuilding..."
 
@@ -26,7 +26,7 @@ sudo nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --c
 current=$(nixos-rebuild list-generations | grep current)
 
 # Commit all changes witih the generation metadata
-git add configuration.nix
+git add . 
 git commit -m "$current"
 
 # Back to where you were

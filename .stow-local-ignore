@@ -1,7 +1,6 @@
 # Comments and blank lines are allowed.
 start.sh
-configuration.nix
-nixos-switch.log
+nixos*
 
 RCS
 .+,v
