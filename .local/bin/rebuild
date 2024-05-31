@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 set -e
-
-# cd 
 pushd ~/.dotfiles
-
 nvim configuration.nix
+
+# Autoformat
+alejandra configuration.nix
 
 # Early return if nothing changed
 if git diff --quiet '*.nix'; then
@@ -27,7 +27,7 @@ current=$(nixos-rebuild list-generations | grep current)
 
 # Commit all changes witih the generation metadata
 git add configuration.nix
-git commit -am "$current"
+git commit -m "$current"
 
 # Back to where you were
 popd
