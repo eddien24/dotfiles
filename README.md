@@ -13,12 +13,13 @@ stow .
 ```
 If everything works, remove `bashrc.bak`
 
-## Applications
-Install dependencies then run the install script!
+## NixOS
+Manual symlink necessary for `configuration.nix`
 ```
-sh start.sh
+ln -s ~/.dotfiles/configuration.nix /etc/nixos/configuration.nix
 ```
 
+## Applications
 ### Neovim
 [Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
@@ -37,9 +38,6 @@ Use `<prefix>-I` when inside of `tmux` to install packages.
 ```
 curl -sS https://starship.rs/install.sh | sh
 ```
-
-### Alacritty
-[Build from source](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
 
 ### Zoxide
 ```

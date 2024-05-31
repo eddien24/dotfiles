@@ -1,5 +1,6 @@
 # Comments and blank lines are allowed.
 start.sh
+configuration.nix
 
 RCS
 .+,v
