@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Bootloader.
@@ -131,7 +131,7 @@
 
   services.fprintd.enable = true;
   services.fprintd.tod.enable = true;
-  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraMono" ]; })
