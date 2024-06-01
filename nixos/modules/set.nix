@@ -28,4 +28,10 @@
     dates = "daily";
     options = "--delete-generations +5";
   };
+
+  # Auto upgrades
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = true;
+  };
 }
