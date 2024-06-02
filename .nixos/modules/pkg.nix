@@ -25,6 +25,7 @@ in {
     unzip
     wget
     killall
+    btop
 
     # Fun CLI things
     starship
@@ -34,8 +35,13 @@ in {
     ripgrep
     libnotify
 
-    # Terminal
+    # Desktop
     kitty
+    mako
+    xdg-desktop-portal-hyprland
+    wl-clipboard
+    waybar
+    rofi-wayland
 
     # Programming tools
     gcc
