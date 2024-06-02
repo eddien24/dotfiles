@@ -68,3 +68,8 @@ eval "$(fzf --bash)"
 function mk {
     command mkdir $1 && cd $1
 }
+
+# make rust project 
+function rmk {
+    command cargo generate basic --name $1 && cd $1 
+}
