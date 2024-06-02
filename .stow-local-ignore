@@ -1,6 +1,6 @@
 # Comments and blank lines are allowed.
 start.sh
-nixos*
+.nixos
 
 RCS
 .+,v
