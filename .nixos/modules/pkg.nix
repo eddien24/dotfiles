@@ -2,7 +2,13 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  unstable =
+    import
+    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/unstable)
+    # reuse the current configuration
+    {config = config.nixpkgs.config;};
+in {
   # Install firefox.
   programs.firefox.enable = true;
 
