@@ -61,6 +61,9 @@ alias tree='eza --tree'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(fzf --bash)"
 
+# Btop
+alias htop='btop'
+
 # mkdir & cd function
 function mk {
     command mkdir $1 && cd $1
