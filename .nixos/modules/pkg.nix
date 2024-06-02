@@ -9,8 +9,8 @@
     # reuse the current configuration
     {config = config.nixpkgs.config;};
 in {
-  # Install firefox.
   programs.firefox.enable = true;
+  programs.hyprland.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -19,7 +19,7 @@ in {
     # Mandatory tools
     vim
     git
-    unstable.neovim
+    unstable.neovim # For v10.0 (switch when 10.0 is stable)
     tmux
     stow
     unzip
