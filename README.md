@@ -1,6 +1,5 @@
-## Requirements
-- Git
-- GNU Stow
+# My Dotfiles
+Dotfiles for my NixOS laptop :D
 
 ## Installation
 
@@ -14,49 +13,21 @@ stow .
 If everything works, remove `bashrc.bak`
 
 ## NixOS
+
 Manual symlink necessary for `configuration.nix`
 ```
-sudo ln -s ~/.dotfiles/nixos/configuration.nix /etc/nixos/configuration.nix
+sudo ln -s ~/.dotfiles/.nixos/configuration.nix /etc/nixos/configuration.nix
 ```
 
-## Applications
-### Neovim
-[Build from source](https://github.com/neovim/neovim/blob/master/BUILD.md)
+## Various Notes
 
-### Tmux
-[Build from source](https://github.com/tmux/tmux?tab=readme-ov-file#welcome-to-tmux)
-- Building dependencies: `libevent` and `ncurses` via package manager
-    (might be called `libevent_dev` and `ncurses_dev`)
-
-#### TPM
+- Need to manually add `tpm` to install packages
 ``` 
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 Use `<prefix>-I` when inside of `tmux` to install packages.
 
-### Starship
+- To `cargo install`, run inside of a `nix-shell`
 ```
-curl -sS https://starship.rs/install.sh | sh
-```
-
-### Zoxide
-```
-cd ~
-curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
-```
-
-### FZF
-```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
-
-### EZA
-```
-cargo install eza
-```
-
-### Ripgrep
-```
-cargo install ripgrep
+nix-shell -p pkg-config openssl
 ```
