@@ -12,6 +12,7 @@
     ./modules/auto.nix
     ./modules/set.nix
     ./modules/pkg.nix
+    ./modules/hypr.nix
   ];
 
   # This value determines the NixOS release from which the default
