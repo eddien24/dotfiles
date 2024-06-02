@@ -31,6 +31,7 @@
     gcc
     cmake
     alejandra
+    rustup
 
     # Miscellaneous
     discord
