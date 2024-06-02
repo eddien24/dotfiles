@@ -49,15 +49,12 @@ alias grep=rg
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
 
-# cargo
-. "$HOME/.cargo/env"
-
 # zoxide 
 eval "$(zoxide init --cmd cd bash)"
 
 # eza
 alias ls='eza --color=always --git --no-filesize --no-user --no-time --icons=always --long --no-permissions'
-alias la='eza --color=always --git --no-filesize --no-user --no-time --icons=always --long --all'
+alias la='eza -lah --git --no-user --icons=always --color=always'
 alias tree='eza --tree'
 
 # Set up fzf key bindings and fuzzy completion
