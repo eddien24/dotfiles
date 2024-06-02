@@ -23,7 +23,6 @@ in {
     tmux
     stow
     unzip
-    wget
     killall
     btop
 

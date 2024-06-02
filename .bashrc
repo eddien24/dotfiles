@@ -43,7 +43,7 @@ alias n='nvim'
 alias less='less -R'
 
 # ripgrep alias
-alias grep=rg
+alias grep='rg -i'
 
 # starship
 eval "$(starship init bash)"
