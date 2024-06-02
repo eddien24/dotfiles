@@ -33,6 +33,9 @@ in {
     ripgrep
     libnotify
 
+    # Terminal
+    kitty
+
     # Programming tools
     gcc
     cmake
