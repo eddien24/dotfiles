@@ -28,9 +28,6 @@
     libnotify
 
     # Programming tools
-    cargo
-    rustc
-    rustfmt
     gcc
     cmake
     alejandra
