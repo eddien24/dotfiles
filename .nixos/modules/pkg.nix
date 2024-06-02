@@ -24,6 +24,7 @@ in {
     stow
     unzip
     wget
+    killall
 
     # Fun CLI things
     starship
