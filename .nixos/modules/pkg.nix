@@ -40,6 +40,8 @@ in {
     wl-clipboard
     waybar
     rofi-wayland
+    grim
+    slurp
 
     # Programming tools
     gcc
