@@ -29,6 +29,7 @@ in {
     trash-cli
     rmtrash
     cron
+    cliphist
 
     # Fun CLI things
     starship
