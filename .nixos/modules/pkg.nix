@@ -44,6 +44,7 @@ in {
     rofi-wayland
     grim
     slurp
+    rofi-power-menu
 
     # Programming tools
     gcc
