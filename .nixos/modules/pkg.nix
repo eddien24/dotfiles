@@ -44,12 +44,14 @@ in {
     mako
     xdg-desktop-portal-hyprland
     wl-clipboard
-    waybar
-    rofi-wayland
     grim
     slurp
+    waybar
+    rofi-wayland
     rofi-power-menu
     swww
+    hyprlock
+    hypridle
 
     # Programming tools
     gcc
