@@ -5,7 +5,7 @@ Dotfiles for my NixOS laptop :D
 
 ```
 mv ~/.bashrc ~/bashrc.bak
-git clone --recurse-submodules git@github.com:eddien24/dotfiles.git ~/.dotfiles && cd .dotfiles
+git clone --recurse-submodules git@github.com:eddien24/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
 stow .
 ```
 
