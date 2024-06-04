@@ -60,6 +60,9 @@ alias ls='eza --color=always --git --no-filesize --no-user --no-time --icons=alw
 alias la='eza -lah --git --no-user --icons=always --color=always'
 alias tree='eza --tree'
 
+# trash
+alias rm='rmtrash'
+
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(fzf --bash)"

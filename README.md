@@ -31,3 +31,8 @@ Use `<prefix>-I` when inside of `tmux` to install packages.
 ```
 nix-shell -p pkg-config openssl
 ```
+
+- For automatic trash removal
+```
+sudo crontab -l; echo "@daily $(which trash-empty) 7" | sudo crontab -
+```
