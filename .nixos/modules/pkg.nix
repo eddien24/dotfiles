@@ -28,6 +28,7 @@ in {
     wl-gammarelay-rs
     trash-cli
     rmtrash
+    cron
 
     # Fun CLI things
     starship
