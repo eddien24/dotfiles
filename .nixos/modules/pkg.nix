@@ -26,6 +26,8 @@ in {
     btop
     brightnessctl
     wl-gammarelay-rs
+    trash-cli
+    rmtrash
 
     # Fun CLI things
     starship
