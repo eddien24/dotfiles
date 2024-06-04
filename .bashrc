@@ -36,6 +36,9 @@ fi
 # add .local/bin to path
 export PATH="$HOME/.local/bin:$PATH"
 
+# exit alias
+alias e='exit'
+
 # nvim alias
 alias n='nvim'
 
