@@ -25,6 +25,7 @@ in {
     killall
     btop
     brightnessctl
+    wl-gammarelay-rs
 
     # Fun CLI things
     starship
