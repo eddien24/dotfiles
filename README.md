@@ -4,28 +4,25 @@ Dotfiles for my NixOS laptop :D
 ## Installation
 
 ```
-cd ~
-mv .bashrc bashrc.bak
-git clone --recurse-submodules git@github.com:eddien24/dotfiles.git ~/.dotfiles
-cd .dotfiles
+mv ~/.bashrc ~/bashrc.bak
+git clone --recurse-submodules git@github.com:eddien24/dotfiles.git ~/.dotfiles && cd .dotfiles
 stow .
 ```
-If everything works, remove `bashrc.bak`
 
 ## NixOS
 
-Manual symlink necessary for `configuration.nix`
+Manual symlink necessary for `configuration.nix`.
 ```
+sudo mv /etc/nixos/configuration.nix ~/conf.nix.bak
 sudo ln -s ~/.dotfiles/.nixos/configuration.nix /etc/nixos/configuration.nix
 ```
 
 ## Various Notes
 
-- Need to manually add `tpm` to install packages
+- Need to manually add `tpm` to install packages. Use `<prefix>-I` when inside of `tmux` to install packages.
 ``` 
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
-Use `<prefix>-I` when inside of `tmux` to install packages.
 
 - To `cargo install`, run inside of a `nix-shell`
 ```
