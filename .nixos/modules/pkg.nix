@@ -49,6 +49,7 @@ in {
     grim
     slurp
     rofi-power-menu
+    swww
 
     # Programming tools
     gcc
