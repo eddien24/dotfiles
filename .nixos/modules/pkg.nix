@@ -24,6 +24,7 @@ in {
     unzip
     killall
     btop
+    brightnessctl
 
     # Fun CLI things
     starship
