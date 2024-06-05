@@ -52,6 +52,7 @@ in {
     swww
     hyprlock
     hypridle
+    playerctl
 
     # Programming tools
     gcc
