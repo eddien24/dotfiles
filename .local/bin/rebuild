@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-pushd ~/.dotfiles/.nixos
+pushd ~/.dotfiles/.nixos >/dev/null
 nvim .
 
 # Autoformat
@@ -30,7 +30,7 @@ git add .
 git commit -m "$current"
 
 # Back to where you were
-popd
+popd >/dev/null
 
 # Send desktop notification
 notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
