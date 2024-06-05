@@ -63,7 +63,7 @@
     },
     "custom/power":{
         "format": " ",
-        "on-click": "rofi -show menu -modi 'menu:rofi-power-menu --choices=shutdown/reboot/lockscreen'",
+        "on-click": "rofi -show menu -modi 'menu:~/.local/bin/powermenu --choices=shutdown/reboot/lockscreen'",
     },
     // The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
     "hyrpland/workspaces": {
