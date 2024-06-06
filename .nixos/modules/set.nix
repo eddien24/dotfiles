@@ -17,7 +17,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraMono"];})
+    (nerdfonts.override {fonts = ["FiraMono" "JetBrainsMono"];})
   ];
 
   fonts.fontconfig.defaultFonts.monospace = ["FiraMono"];
@@ -26,7 +26,7 @@
   nix.gc = {
     automatic = true;
     dates = "daily";
-    options = "--delete-generations +5";
+    options = "--delete-older-than 7d";
   };
 
   boot.loader.grub.configurationLimit = 5;
