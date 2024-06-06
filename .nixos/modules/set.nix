@@ -4,7 +4,7 @@
   ...
 }: {
   # Touchpad settings
-  services.xserver.libinput.touchpad = {
+  services.libinput.touchpad = {
     naturalScrolling = false;
     accelProfile = "flat";
   };
