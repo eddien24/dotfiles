@@ -29,6 +29,8 @@
     options = "--delete-generations +5";
   };
 
+  boot.loader.grub.configurationLimit = 5;
+
   # Auto upgrades
   system.autoUpgrade = {
     enable = true;
