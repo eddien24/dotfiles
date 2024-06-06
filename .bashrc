@@ -36,13 +36,13 @@ fi
 # add .local/bin to path
 export PATH="$HOME/.local/bin:$PATH"
 
-# exit alias
+alias c='clear'
 alias e='exit'
 
 # nvim alias
 alias n='nvim'
 
-# less alias
+# less alias for colors
 alias less='less -R'
 
 # ripgrep alias
