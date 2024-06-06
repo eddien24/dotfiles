@@ -1,8 +1,8 @@
 {
 	"layer": "top",
 	// Using margin-bottom with a negative value in order to reduce the space between Hyprland window and waybar
-	"margin-bottom": -15,
-	"margin-top": 0,
+    "margin": 0,
+    "margin-right": 10,
 	"modules-left": ["custom/launcher", "cpu", "memory", "network"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["backlight", "pulseaudio", "clock", "battery", "custom/power"],
@@ -11,11 +11,11 @@
 		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
-		"format-muted": "   {volume}%",
+		"format-muted": "  {volume}%",
         "format-bluetooth": "󰂱 {icon} {volume}", 
 		"on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"format-icons": {
-			"default": [" ", " "]
+			"default": [" ", "  "]
 		}
 	},
 	"network": {
@@ -37,9 +37,9 @@
             "warning": 30,
             "critical": 20
         },
-        "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": [" ", " ", " ", " ", " "],
         "interval": 1,
@@ -62,7 +62,7 @@
         "on-click": "rofi -show drun -show-icons",
     },
     "custom/power":{
-        "format": " ",
+        "format": "⏻ ",
         "on-click": "rofi -show menu -modi 'menu:~/.local/bin/powermenu --choices=shutdown/reboot/lockscreen'",
     },
     // The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
