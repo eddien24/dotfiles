@@ -16,7 +16,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # ignore commands in history
-HISTIGNORE="clear:rm *"
+HISTIGNORE="clear:rm *:exit:e:c"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -53,7 +53,7 @@ alias grep='rg -i'
 
 # starship
 eval "$(starship init bash)"
-export STARSHIP_CONFIG=~/example/non/default/path/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # zoxide 
 eval "$(zoxide init --cmd cd bash)"
