@@ -38,6 +38,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 alias c='clear'
 alias e='exit'
+alias cp='cp -i'
+alias mv='mv -i'
+alias s='sudo !!'
 
 # nvim alias
 alias n='nvim'
