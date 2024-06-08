@@ -8,12 +8,24 @@
 }: {
   imports = [
     /etc/nixos/hardware-configuration.nix
+    <home-manager/nixos>
 
     ./modules/auto.nix
     ./modules/set.nix
     ./modules/pkg.nix
     ./modules/hypr.nix
   ];
+
+  # home-manager.useGlobalPkgs = true;
+  # users.users.eddie.isNormalUser = true;
+  # home-manager.users.eddie = {pkgs, ...}: {
+  #   home.packages = [];
+  #   programs.bash.enable = true;
+  #
+  #   # The state version is required and should stay at the version you
+  #   # originally installed.
+  #   home.stateVersion = "24.05";
+  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
