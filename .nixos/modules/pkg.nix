@@ -9,33 +9,21 @@
     # reuse the current configuration
     {config = config.nixpkgs.config;};
 in {
-  programs.firefox.enable = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # Mandatory tools
-    vim
-    git
-    tmux
     stow
     unzip
     killall
-    btop
     brightnessctl
     wl-gammarelay-rs
     trash-cli
     rmtrash
     cron
-    cliphist
 
     # Fun CLI things
-    starship
-    zoxide
-    fzf
-    eza
-    ripgrep
     libnotify
 
     # Desktop
