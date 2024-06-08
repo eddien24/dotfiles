@@ -15,11 +15,6 @@
     rmtrash
     cron
 
-    # Fun CLI things
-    starship
-    libnotify
-
-    # Desktop
     kitty
     mako
     xdg-desktop-portal-hyprland
@@ -32,10 +27,5 @@
     cmake
     alejandra
     rustup
-
-    # Miscellaneous
-    discord
-    spotify
-    zoom-us
   ];
 }

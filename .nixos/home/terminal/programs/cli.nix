@@ -1,4 +1,9 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [
+    starship
+    libnotify
+  ];
+
   programs = {
     tmux.enable = true;
     zoxide.enable = true;
