@@ -21,6 +21,7 @@
     '';
   };
 
+  boot.plymouth.enable = true;
   hardware.opengl.enable = true;
   services.xserver = {
     enable = true;
