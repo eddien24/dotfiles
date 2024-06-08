@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
     # <home-manager/nixos>
 
     ./modules/auto.nix

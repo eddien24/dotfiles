@@ -9,12 +9,16 @@
   outputs = {
     self,
     nixpkgs,
-  }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
+    ...
+  } @ inputs: {
+    # Please replace my-nixos with your hostname
+    nixosConfigurations.eddie-gbook = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+        ./configuration.nix
+      ];
     };
-  in {
   };
 }
