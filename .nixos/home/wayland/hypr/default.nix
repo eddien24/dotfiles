@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   imports = [
-    ./tools.nix
-    ./hypr
+    ./hyprland
   ];
 }

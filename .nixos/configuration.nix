@@ -12,7 +12,6 @@
     ./modules/auto.nix
     ./modules/set.nix
     ./modules/pkg.nix
-    ./modules/hypr.nix
   ];
 
   nix = {
@@ -22,6 +21,16 @@
     '';
   };
 
+  hardware.opengl.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager.gdm = {
+      enable = true;
+      wayland = true;
+    };
+  };
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   home-manager.backupFileExtension = ".bak";
   system.stateVersion = "23.11";
 }
