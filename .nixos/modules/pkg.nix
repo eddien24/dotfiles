@@ -15,6 +15,7 @@
     rmtrash
     cron
 
+    starship
     kitty
     mako
     xdg-desktop-portal-hyprland
