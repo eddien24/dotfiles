@@ -8,7 +8,7 @@
 }: {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    <home-manager/nixos>
+    # <home-manager/nixos>
 
     ./modules/auto.nix
     ./modules/set.nix
@@ -16,10 +16,14 @@
     ./modules/hypr.nix
   ];
 
-  # home-manager.useGlobalPkgs = true;
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
   # users.users.eddie.isNormalUser = true;
   # home-manager.users.eddie = {pkgs, ...}: {
-  #   home.packages = [];
   #   programs.bash.enable = true;
   #
   #   # The state version is required and should stay at the version you
