@@ -37,7 +37,6 @@
     fzf.enable = true;
     eza.enable = true;
     ripgrep.enable = true;
-    starship.enable = true;
   };
 
   services = {

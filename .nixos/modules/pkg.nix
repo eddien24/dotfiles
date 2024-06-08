@@ -24,6 +24,7 @@ in {
     cron
 
     # Fun CLI things
+    starship
     libnotify
 
     # Desktop
