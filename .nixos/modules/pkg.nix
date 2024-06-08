@@ -5,7 +5,7 @@
 }: let
   unstable =
     import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixos-unstable)
+    # (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixos-unstable)
     # reuse the current configuration
     {config = config.nixpkgs.config;};
 in {
@@ -18,7 +18,8 @@ in {
     # Mandatory tools
     vim
     git
-    unstable.neovim # For v10.0 (switch when 10.0 is stable)
+    neovim
+    # unstable.neovim # For v10.0 (switch when 10.0 is stable)
     tmux
     stow
     unzip
