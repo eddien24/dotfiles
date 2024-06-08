@@ -7,7 +7,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "eddie-gbook";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -52,16 +52,6 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     # media-session.enable = true;
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.eddie = {
-    isNormalUser = true;
-    description = "Eddie";
-    extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -22,7 +22,14 @@
       experimental-features = nix-command flakes
     '';
   };
-  # users.users.eddie.isNormalUser = true;
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.eddie = {
+    isNormalUser = true;
+    description = "Eddie";
+    extraGroups = ["networkmanager" "wheel"];
+  };
+
   # home-manager.users.eddie = {pkgs, ...}: {
   #   programs.bash.enable = true;
   #
