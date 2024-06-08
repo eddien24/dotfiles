@@ -18,8 +18,6 @@ in {
     # Mandatory tools
     vim
     git
-    neovim
-    # unstable.neovim # For v10.0 (switch when 10.0 is stable)
     tmux
     stow
     unzip
