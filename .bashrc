@@ -82,6 +82,3 @@ function mk {
 function rmk {
     command cargo generate basic --name $1 && cd $1 
 }
-
-# Use .bashrc in home-manager 
-. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
