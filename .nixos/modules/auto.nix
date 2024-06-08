@@ -54,6 +54,13 @@
     # media-session.enable = true;
   };
 
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.eddie = {
+    isNormalUser = true;
+    description = "Eddie";
+    extraGroups = ["networkmanager" "wheel"];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

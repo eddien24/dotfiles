@@ -8,7 +8,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    # <home-manager/nixos>
 
     ./modules/auto.nix
     ./modules/set.nix
@@ -22,21 +21,6 @@
       experimental-features = nix-command flakes
     '';
   };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.eddie = {
-    isNormalUser = true;
-    description = "Eddie";
-    extraGroups = ["networkmanager" "wheel"];
-  };
-
-  # home-manager.users.eddie = {pkgs, ...}: {
-  #   programs.bash.enable = true;
-  #
-  #   # The state version is required and should stay at the version you
-  #   # originally installed.
-  #   home.stateVersion = "24.05";
-  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
