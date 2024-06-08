@@ -5,9 +5,7 @@
       "HYPRCURSOR_SIZE,24"
     ];
 
-    debug = {
-      disable_logs = false;
-    };
+    monitor = ", preferred, auto, 1.2";
 
     general = {
       gaps_in = 5;

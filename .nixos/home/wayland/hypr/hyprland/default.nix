@@ -5,5 +5,6 @@
     ./rules.nix
     ./start.nix
   ];
+
   wayland.windowManager.hyprland.enable = true;
 }
