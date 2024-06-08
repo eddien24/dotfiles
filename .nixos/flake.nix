@@ -16,7 +16,6 @@
     home-manager,
     ...
   } @ inputs: {
-    # Please replace my-nixos with your hostname
     nixosConfigurations.eddie-gbook = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
