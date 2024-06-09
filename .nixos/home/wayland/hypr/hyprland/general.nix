@@ -1,8 +1,9 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland.settings = {
     env = [
-      "XCURSOR_SIZE,24"
-      "HYPRCURSOR_SIZE,24"
+      "XCURSOR_SIZE, 48"
+      "HYPRCURSOR_THEME, McMojave"
+      "HYPRCURSOR_SIZE, 48"
     ];
 
     monitor = ", preferred, auto, 1.2";

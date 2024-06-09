@@ -8,7 +8,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-
     ./modules/auto.nix
     ./modules/set.nix
     ./modules/pkg.nix
