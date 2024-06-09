@@ -20,8 +20,8 @@
     mako
     xdg-desktop-portal-hyprland
     waybar
-    hyprlock
-    hypridle
+    # hyprlock
+    # hypridle
 
     # Programming tools
     gcc

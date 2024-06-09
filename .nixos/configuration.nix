@@ -5,9 +5,7 @@
   config,
   pkgs,
   ...
-}: let
-  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-in {
+}: {
   imports = [
     ./hardware-configuration.nix
 
@@ -23,29 +21,9 @@ in {
     '';
   };
 
+  security.pam.services.hyprlock = {};
+
   hardware.opengl.enable = true;
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${tuigreet} --remember --remember-session --time --cmd hyprland";
-        user = "eddie";
-      };
-    };
-  };
-
-  systemd.services.greetd.serviceConfig = {
-    Type = "idle";
-    StandardInput = "tty";
-    StandardOutput = "tty";
-    StandardError = "journal"; # Without this errors will spam on screen
-    # Without these bootlogs will spam on screen
-    TTYReset = true;
-    TTYVHangup = true;
-    TTYVTDisallocate = true;
-  };
-
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   home-manager.backupFileExtension = ".bak";
   system.stateVersion = "23.11";
