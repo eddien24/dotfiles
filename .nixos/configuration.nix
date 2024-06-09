@@ -22,11 +22,14 @@
   };
 
   hardware.opengl.enable = true;
-  services.xserver = {
+
+  services.greetd = {
     enable = true;
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --remember-session --time --cmd hyprland";
+        user = "eddie";
+      };
     };
   };
 
