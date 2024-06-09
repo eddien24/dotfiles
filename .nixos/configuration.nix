@@ -7,7 +7,6 @@
   ...
 }: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  theme = "--theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red";
 in {
   imports = [
     ./hardware-configuration.nix
@@ -30,7 +29,7 @@ in {
     enable = true;
     settings = {
       default_session = {
-        command = "${tuigreet} ${theme} -remember --remember-session --time --cmd hyprland";
+        command = "${tuigreet} --remember --remember-session --time --cmd hyprland";
         user = "eddie";
       };
     };
