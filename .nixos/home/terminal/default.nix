@@ -2,6 +2,7 @@
   imports = [
     ./cli.nix
     ./git.nix
-    ./neovim
+    ./neovim.nix
+    ./starship.nix
   ];
 }

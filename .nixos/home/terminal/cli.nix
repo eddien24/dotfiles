@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     stow
-    unzip
-    killall
     trash-cli
     rmtrash
     cron
