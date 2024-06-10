@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  home.file.".config/waybar/rose-pine-moon.css".source = ./rose-pine-moon.css;
   programs.waybar = {
     enable = true;
     style = ./style.css;
