@@ -15,8 +15,8 @@ if git diff --quiet .; then
 fi
 
 # Show changes
-git diff -U0 . ":(exclude)flake.lock"
 git add . 
+git diff -U0 . ":(exclude)flake.lock"
 
 echo "NixOS Rebuilding..."
 
