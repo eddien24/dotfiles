@@ -1,6 +1,6 @@
 {pkgs, ...}: {
+  home.packages = [pkgs.waybar];
   programs.waybar = {
-    enable = true;
     style = ./style.css;
     settings = {
       mainBar = {
