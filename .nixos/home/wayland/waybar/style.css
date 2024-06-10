@@ -1,3 +1,5 @@
+@import "./rose-pine-moon.css";
+
 * {
 	border-radius: 10px;
 	font-family: "JetBrains Mono Nerd Font" ;
@@ -15,8 +17,8 @@ window#waybar {
 	padding-left: 10px;
     padding-right: 10px;
 	margin-bottom: 0px;
-	color: #E5E5E5;
-	background: #252733;
+	color: @text;
+	background: @base;
 }
 
 #custom-launcher {
@@ -34,8 +36,8 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #BF616A;
-    color: #161320;
+    background-color: @love;
+    color: @text;
 }
 
 #workspaces {
@@ -44,26 +46,26 @@ window#waybar {
 }
 
 #workspaces button {
-	color: #E5E5E5;
+	color: @text;
 	background: transparent;
 	border-radius: 2px;
 }
 
 #workspaces button.occupied {
-	color: #F28FAD;
+	color: @rose;
 	background: transparent;
 }
 
 #workspaces button.active {
-	color: #ABE9B3;
+	color: @rose;
 }
 
 #workspaces button:hover {
 	box-shadow: inherit;
-    color: #E8A2AF;
+    color: @pine;
     border: transparent;
 }
 
 #workspaces button.active:hover {
-	color: #FAE3B0;
+	color: @foam;
 }

@@ -18,13 +18,15 @@
 
         cpu = {
           interval = 30;
-          format = "  {}%";
+          # format = "  {}%";
+          format = "help";
           max-length = 1;
         };
 
         memory = {
           interval = 30;
-          format = "  {}%";
+          # format = "  {}%";
+          format = "balls";
           max-length = 1;
         };
 
@@ -37,7 +39,7 @@
           format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
 
-        "hyrpland/workspaces" = {
+        "hyprland/workspaces" = {
           format = "{icon}";
           on-click = "activate";
         };
