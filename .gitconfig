@@ -1,7 +1,0 @@
-[user]
-	name = Eddie Nguyen
-	email = edward_nguyen@brown.edu
-[credential]
-	helper = store
-[init]
-    defaultBranch = main
