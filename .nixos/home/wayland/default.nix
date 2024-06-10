@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ./tools.nix
     ./hypr
+    ./tools.nix
+    ./waybar
   ];
 }

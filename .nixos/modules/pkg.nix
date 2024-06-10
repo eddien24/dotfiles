@@ -19,9 +19,7 @@
     kitty
     mako
     xdg-desktop-portal-hyprland
-    waybar
-    # hyprlock
-    # hypridle
+    # waybar
 
     # Programming tools
     gcc

@@ -1,9 +1,7 @@
 {pkgs, ...}: {
+  environment.variables.FLAKE = "/home/mihai/.dotfiles/.nixos";
   programs.nh = {
     enable = true;
-    flake = "/home/eddie/.dotfiles/.nixos";
-
-    # weekly cleanup
     clean = {
       enable = true;
       dates = "daily";
