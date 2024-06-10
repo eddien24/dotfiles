@@ -9,14 +9,6 @@ git clone --recurse-submodules git@github.com:eddien24/dotfiles.git ~/.dotfiles 
 stow .
 ```
 
-## NixOS
-
-Manual symlink necessary for `configuration.nix`.
-```bash
-sudo mv /etc/nixos/configuration.nix ~/conf.nix.bak
-sudo ln -s ~/.dotfiles/.nixos/configuration.nix /etc/nixos/configuration.nix
-```
-
 ## Various Notes
 
 - Need to manually add `tpm` to install packages. Use `<prefix>-I` when inside of `tmux` to install packages.

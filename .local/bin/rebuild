@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-pushd ~/.dotfiles/.nixos >/dev/null
+pushd ~/.dotfiles/.nixos > /dev/null
 nvim .
 
 # Autoformat
@@ -10,27 +10,29 @@ alejandra .
 # Early return if nothing changed
 if git diff --quiet .; then
     echo "No changes detected, exiting."
-    popd
+    popd > /dev/null
     exit 0
 fi
 
 # Show changes
-git diff -U0 .
+git diff -U0 . ":(exclude)flake.lock"
+git add . 
 
 echo "NixOS Rebuilding..."
 
 # Supress everything except for errors
-sudo nixos-rebuild switch --flake .# &>nixos-switch.log || (cat nixos-switch.log | rg error && exit 1)
+nh os switch . --ask
 
-# Get current generation metadata
-current=$(nixos-rebuild list-generations | grep current)
-
-# Commit all changes witih the generation metadata
-git add . 
-git commit -m "$current"
+echo "Commit changes? (y/n)"
+read ans
+if [ "$ans" != "${ans#[Yy]}" ]; then 
+    echo "Input commit message:"
+    read msg
+    git commit -m "$msg"
+fi
 
 # Back to where you were
-popd >/dev/null
+popd > /dev/null
 
 # Send desktop notification
 notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
