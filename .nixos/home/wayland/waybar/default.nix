@@ -1,6 +1,6 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.waybar];
   programs.waybar = {
+    enable = true;
     style = ./style.css;
     settings = {
       mainBar = {
@@ -16,13 +16,13 @@
           on-click = "rofi -show drun -show-icons";
         };
 
-        "cpu" = {
+        cpu = {
           interval = 30;
           format = "  {}%";
           max-length = 1;
         };
 
-        "memory" = {
+        memory = {
           interval = 30;
           format = "  {}%";
           max-length = 1;
