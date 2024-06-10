@@ -19,16 +19,12 @@
 
         cpu = {
           interval = 30;
-          # format = "  {}%";
-          format = "help";
-          max-length = 1;
+          format = "  {}%";
         };
 
         memory = {
           interval = 30;
-          # format = "  {}%";
-          format = "balls";
-          max-length = 1;
+          format = "  {}%";
         };
 
         network = {
