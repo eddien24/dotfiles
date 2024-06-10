@@ -16,10 +16,8 @@
     cron
 
     starship
-    kitty
     mako
     xdg-desktop-portal-hyprland
-    # waybar
 
     # Programming tools
     gcc
