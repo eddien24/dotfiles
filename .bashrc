@@ -85,5 +85,5 @@ function mk {
 
 # make rust project 
 function rmk {
-    command cargo generate basic --name $1 && cd $1 
+    command cargo generate eddien24/rust-template --name $1 && cd $1 
 }
