@@ -66,7 +66,7 @@
       # Power menu
       "SUPER, U, exec, rofi -show menu -modi 'menu:~/.local/bin/powermenu --choices=shutdown/reboot'"
 
-      # Lockscreen
+      # Lockscreen (SUPER + ;)
       "SUPER, code:47, exec, pidof hyprlock || hyprlock > /dev/null"
 
       # Clipboard history
