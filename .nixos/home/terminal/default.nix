@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
+    ./cli.nix
+    ./git.nix
     ./neovim
-    ./programs
-    ./kitty
   ];
 }
