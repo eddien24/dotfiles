@@ -16,8 +16,6 @@
     cron
 
     starship
-    mako
-    xdg-desktop-portal-hyprland
 
     # Programming tools
     gcc
