@@ -5,7 +5,6 @@
     ./set.nix
 
     ../../modules/home-manager.nix
-    ../../modules/pkgs.nix
     ../../modules/wayland.nix
     ../../system
   ];
