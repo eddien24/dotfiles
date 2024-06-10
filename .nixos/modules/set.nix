@@ -22,15 +22,6 @@
 
   fonts.fontconfig.defaultFonts.monospace = ["FiraMono"];
 
-  # Garbage collection
-  nix.gc = {
-    automatic = true;
-    dates = "daily";
-    options = "--delete-older-than 7d";
-  };
-
-  boot.loader.grub.configurationLimit = 5;
-
   # Auto upgrades
   system.autoUpgrade = {
     enable = true;
