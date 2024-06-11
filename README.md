@@ -3,6 +3,8 @@ Dotfiles for my NixOS laptop :D
 
 ## Various Notes
 
+- Neovim configuration at [eddien24/nvim](https://github.com/eddien24/nvim)
+- Wallpapers at [eddien24/wallpapers](https://github.com/eddien24/wallpapers)
 - Need to manually add `tpm` to install packages. Use `<prefix>-I` when inside of `tmux` to install packages.
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
