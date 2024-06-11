@@ -51,7 +51,7 @@ alias s='sudo !!'
 alias n='nvim'
 
 # less alias for colors
-alias less='less -R'
+alias less='less -IFR'
 
 # ripgrep alias
 alias grep='rg -i'

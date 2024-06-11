@@ -55,14 +55,11 @@
       color7   #e0def4
       color15  #e0def4
 
+      shell_integration no-cursor
       map ctrl+h neighboring_window left
       map ctrl+j neighboring_window down
       map ctrl+k neighboring_window up
       map ctrl+l neighboring_window right
     '';
   };
-  # home.file = {
-  #   ".config/kitty/kitty.conf".source = ./kitty.conf;
-  #   ".config/kitty/rose-pine-moon.conf".source = ./rose-pine-moon.conf;
-  # };
 }
