@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   programs.bash = {
-    enable = true;
-    bashrcExtra = ''
+    shellInit = ''
       # If not running interactively, don't do anything
       case $- in
           *i*) ;;
@@ -87,16 +86,6 @@
       function rmk {
           command cargo generate eddien24/rust-template --name $1 && cd $1
       }
-    '';
-    profileExtra = ''
-      # Detect if running bash in interactive shell
-      # so TMUX uses `.bashrc`
-      if [ -n "$BASH_VERSION" -a -n "$PS1" ]; then
-          # include .bashrc if it exists
-          if [ -f "$HOME/.bashrc" ]; then
-          . "$HOME/.bashrc"
-          fi
-      fi
     '';
   };
 }

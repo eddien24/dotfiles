@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./bat.nix
     ./cli.nix
     ./compilers.nix
     ./git.nix
