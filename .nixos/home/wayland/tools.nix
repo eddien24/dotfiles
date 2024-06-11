@@ -4,7 +4,6 @@
     grim
     slurp
     cliphist
-    rofi-wayland
     swww
     wl-gammarelay-rs
     brightnessctl

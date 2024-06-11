@@ -70,7 +70,7 @@
       "SUPER, code:47, exec, pidof hyprlock || hyprlock > /dev/null"
 
       # Clipboard history
-      "SUPER, X, exec, rofi -modi clipboard:~/.local/share/rofi/cliphist-rofi -show clipboard -show-icons"
+      "SUPER, X, exec, rofi -modi clipboard:cliphist-rofi -show clipboard -show-icons"
 
       # New wallpaper
       "SUPER, W, exec, wpswap"
