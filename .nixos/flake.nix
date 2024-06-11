@@ -25,7 +25,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.eddie = import ./home;
+            home-manager.users.eddie = import ./home/gbook.nix;
           }
         ];
       };
