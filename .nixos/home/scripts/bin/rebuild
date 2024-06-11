@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -e
+pushd ~/.dotfiles/.nixos > /dev/null
+nvim .
+
+nix run nixpkgs#alejandra .
+
+# Early return if nothing changed
+if git diff --quiet .; then
+    echo "No changes detected, exiting."
+    popd > /dev/null
+    exit 0
+fi
+
+git diff -U0 . ":(exclude)flake.lock"
+git add . 
+
+echo "NixOS Rebuilding..."
+nh os switch . 
+popd > /dev/null
+
+# Send desktop notification
+notify-send "NixOS Rebuilt OK!"

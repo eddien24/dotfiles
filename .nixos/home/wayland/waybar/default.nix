@@ -79,7 +79,7 @@
 
         "custom/power" = {
           format = "⏻ ";
-          on-click = "rofi -show menu -modi 'menu:~/.local/bin/powermenu --choices=shutdown/reboot/lockscreen'";
+          on-click = "rofi -show menu -modi 'menu:powermenu --choices=shutdown/reboot/lockscreen'";
         };
       };
     };

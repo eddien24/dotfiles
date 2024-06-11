@@ -54,7 +54,7 @@
       "SUPER SHIFT, F, exec, firefox -p school"
 
       # Screenshot & copy to clipboard
-      "SUPER, S, exec, ~/.local/bin/screenshot"
+      "SUPER, S, exec, screenshot"
 
       # Night light toggle
       "SUPER, N, exec, busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
@@ -64,7 +64,7 @@
       "SUPER, P, exec, pkill waybar && waybar"
 
       # Power menu
-      "SUPER, U, exec, rofi -show menu -modi 'menu:~/.local/bin/powermenu --choices=shutdown/reboot'"
+      "SUPER, U, exec, rofi -show menu -modi 'menu:powermenu --choices=shutdown/reboot'"
 
       # Lockscreen (SUPER + ;)
       "SUPER, code:47, exec, pidof hyprlock || hyprlock > /dev/null"
@@ -73,7 +73,7 @@
       "SUPER, X, exec, rofi -modi clipboard:~/.local/share/rofi/cliphist-rofi -show clipboard -show-icons"
 
       # New wallpaper
-      "SUPER, W, exec, ~/.local/bin/wpswap"
+      "SUPER, W, exec, wpswap"
       "SUPER SHIFT, W, exec, pkill swww && swww-daemon"
     ];
 
