@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "@daily $(which trash-empty) 7"
+echo "@daily $(which cliphist) wipe"

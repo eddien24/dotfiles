@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-pushd ~/.dotfiles/.nixos > /dev/null
+pushd ~/.dotfiles > /dev/null
 nvim .
 
 nix run nixpkgs#alejandra .

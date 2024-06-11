@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  environment.variables.FLAKE = "/home/eddie/.dotfiles/.nixos";
+  environment.variables.FLAKE = "/home/eddie/.dotfiles/";
   programs.nh = {
     enable = true;
     clean = {
