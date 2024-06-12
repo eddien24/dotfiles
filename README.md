@@ -1,5 +1,5 @@
 # My Dotfiles
-Dotfiles for my NixOS laptop :D
+NixOS dotfiles for my laptop and WSL2.
 
 ## Various Notes
 
