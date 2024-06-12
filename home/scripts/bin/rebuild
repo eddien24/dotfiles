@@ -20,5 +20,8 @@ echo "NixOS Rebuilding..."
 nh os switch . 
 popd > /dev/null
 
-# Send desktop notification
-notify-send "NixOS Rebuilt OK!"
+# Send desktop notification if `mako` is installed
+if type mako > /dev/null 
+then
+    notify-send "NixOS Rebuilt OK!"
+fi

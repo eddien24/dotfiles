@@ -1,5 +1,5 @@
 {
-  description = "System Configuration :D";
+  description = "System Configuration for NixOS laptop & WSL";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
