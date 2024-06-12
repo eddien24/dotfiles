@@ -3,34 +3,39 @@
     enable = true;
     clock24 = true;
     extraConfig = ''
-      # plugins
-      set -g @plugin 'tmux-plugins/tpm'
-      set -g @plugin 'tmux-plugins/tmux-sensible'
-      set -g @plugin 'christoomey/vim-tmux-navigator'
+            # colors
+      set -ga terminal-overrides ',xterm-256color:Tc'
+      set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
+      set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
 
-      # mouse support
-      set -g mouse on
+            # plugins
+            set -g @plugin 'tmux-plugins/tpm'
+            set -g @plugin 'tmux-plugins/tmux-sensible'
+            set -g @plugin 'christoomey/vim-tmux-navigator'
 
-      # Start windows and panes at 1
-      set -g base-index 1
-      set -g pane-base-index 1
-      set-window-option -g pane-base-index 1
-      set-option -g renumber-windows on
+            # mouse support
+            set -g mouse on
 
-      # color variant
-      set -g @rose_pine_variant 'moon'
+            # Start windows and panes at 1
+            set -g base-index 1
+            set -g pane-base-index 1
+            set-window-option -g pane-base-index 1
+            set-option -g renumber-windows on
 
-      # set prefix
-      unbind C-b
-      set -g prefix C-Space
-      bind C-Space send-prefix
+            # color variant
+            set -g @rose_pine_variant 'moon'
 
-      # run plugins
-      run '~/.config/tmux/plugins/tpm/tpm'
+            # set prefix
+            unbind C-b
+            set -g prefix C-Space
+            bind C-Space send-prefix
 
-      # opens panes in current directory
-      bind '"' split-window -v -c "#{pane_current_path}"
-      bind '%' split-window -h -c "#{pane_current_path}"
+            # run plugins
+            run '~/.config/tmux/plugins/tpm/tpm'
+
+            # opens panes in current directory
+            bind '"' split-window -v -c "#{pane_current_path}"
+            bind '%' split-window -h -c "#{pane_current_path}"
     '';
   };
 }
