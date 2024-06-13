@@ -36,15 +36,14 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/wsl
-
           nixos-wsl.nixosModules.default
           {
-            system.stateVersion = "23.11";
             wsl = {
               enable = true;
               defaultUser = "eddie";
               wslConf.network.hostname = "wsl";
             };
+            system.stateVersion = "23.11";
           }
 
           home-manager.nixosModules.home-manager

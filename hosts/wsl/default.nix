@@ -14,6 +14,6 @@
     ../../modules/bash.nix
     ../../modules/home-manager.nix
     ../../modules/zsh.nix
-    ../../system/nix
+    ../../modules/nix
   ];
 }
