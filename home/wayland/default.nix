@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./gtk.nix
     ./hypr
     ./kitty.nix
     ./mako.nix
