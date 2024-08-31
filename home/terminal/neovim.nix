@@ -6,6 +6,7 @@
       gcc
       unzip
       lua-language-server
+      nodePackages.prettier
     ];
   };
 }
