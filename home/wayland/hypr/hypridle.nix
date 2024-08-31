@@ -8,7 +8,6 @@
         after_sleep_cmd = "hyprctl dispatch dpms on";
       };
 
-      # Lower brightness after 1.5 minutes
       listener = [
         {
           timeout = 90;

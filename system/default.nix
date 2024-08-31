@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ./nix
     ./fonts.nix
+    ./linger.nix
+    ./nix
   ];
 }
