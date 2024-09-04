@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    discord
-    spotify
-    zoom-us
+    brave
+    # discord
+    # spotify
+    # zoom-us
   ];
 }

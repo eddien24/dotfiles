@@ -8,5 +8,6 @@
       lua-language-server
       nodePackages.prettier
     ];
+    plugins = [pkgs.vimPlugins.nvim-treesitter.withAllGrammars];
   };
 }

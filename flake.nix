@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixos-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,19 +12,24 @@
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nixos-wsl,
-    ...
-  } @ inputs: {
+  outputs = inputs: let
+    system = "x86_64-linux";
+    unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
+    xdphOverlay = final: prev: {
+      inherit (unstable-small-pkgs) xdg-desktop-portal-hyprland;
+    };
+    pkgs = import inputs.nixpkgs {
+      inherit system;
+      overlays = [xdphOverlay];
+    };
+  in {
     nixosConfigurations = {
-      eddie-gbook = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      eddie-gbook = inputs.nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit inputs pkgs;};
         modules = [
           ./hosts/gbook
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -32,11 +38,11 @@
         ];
       };
 
-      wsl = nixpkgs.lib.nixosSystem {
+      wsl = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/wsl
-          nixos-wsl.nixosModules.default
+          inputs.nixos-wsl.nixosModules.default
           {
             wsl = {
               enable = true;
@@ -46,7 +52,7 @@
             system.stateVersion = "23.11";
           }
 
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
