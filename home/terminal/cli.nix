@@ -5,6 +5,7 @@
     stow
     trash-cli
     rmtrash
+    fd
   ];
 
   programs = {

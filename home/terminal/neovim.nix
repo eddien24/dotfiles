@@ -7,7 +7,12 @@
       unzip
       lua-language-server
       nodePackages.prettier
+      texlab
+      perl538Packages.LatexIndent
     ];
-    plugins = [pkgs.vimPlugins.nvim-treesitter.withAllGrammars];
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter.withAllGrammars
+      nvim-treesitter-parsers.nix
+    ];
   };
 }
