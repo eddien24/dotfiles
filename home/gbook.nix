@@ -6,7 +6,6 @@
   imports = [
     ./scripts
     ./terminal
-    ./programs
     ./wayland
   ];
 
