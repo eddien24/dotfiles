@@ -39,7 +39,12 @@
   users.users.eddie = {
     isNormalUser = true;
     description = "Eddie";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+      "wireshark"
+    ];
   };
 
   services.openssh.enable = true;
