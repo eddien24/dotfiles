@@ -60,6 +60,8 @@
       map ctrl+j neighboring_window down
       map ctrl+k neighboring_window up
       map ctrl+l neighboring_window right
+
+      map ctrl+shift+enter new_window_with_cwd
     '';
   };
 }
