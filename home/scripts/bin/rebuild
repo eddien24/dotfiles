@@ -16,8 +16,7 @@ fi
 batdiff .
 git add . 
 
-echo "NixOS Rebuilding..."
-nh os switch . 
+nh os test .
 popd > /dev/null
 
 # Send desktop notification if `mako` is installed
