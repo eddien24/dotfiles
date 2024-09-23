@@ -7,7 +7,6 @@
       "SUPER, M, exit"
       "SUPER, V, togglefloating"
       "SUPER, R, exec, rofi -show drun -show-icons"
-      "SUPER, J, togglesplit"
 
       # move with arrow keys
       "SUPER, left, movefocus, l"
