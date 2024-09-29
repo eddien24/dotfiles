@@ -56,10 +56,10 @@
       color15  #e0def4
 
       shell_integration no-cursor
-      map ctrl+h neighboring_window left
-      map ctrl+j neighboring_window down
-      map ctrl+k neighboring_window up
-      map ctrl+l neighboring_window right
+      map ctrl+shift+h neighboring_window left
+      map ctrl+shift+j neighboring_window down
+      map ctrl+shift+k neighboring_window up
+      map ctrl+shift+l neighboring_window right
 
       map ctrl+shift+enter new_window_with_cwd
     '';
