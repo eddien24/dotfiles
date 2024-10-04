@@ -16,5 +16,6 @@
     diff = "batdiff";
     man = "batman";
     grep = "batgrep -i";
+    icat = "kitten icat";
   };
 }
