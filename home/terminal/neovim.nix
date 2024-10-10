@@ -11,8 +11,6 @@
       perl538Packages.LatexIndent
     ];
     plugins = with pkgs.vimPlugins; [
-      nvim-treesitter.withAllGrammars
-      nvim-treesitter-parsers.nix
     ];
   };
 }
