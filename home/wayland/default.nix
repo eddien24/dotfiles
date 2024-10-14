@@ -10,5 +10,6 @@
     ./tools.nix
     ./unfree.nix
     ./waybar
+    ./zathura.nix
   ];
 }

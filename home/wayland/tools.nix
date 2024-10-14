@@ -8,7 +8,6 @@
     wl-gammarelay-rs
     brightnessctl
     playerctl
-    zathura
     webcord
   ];
 }
