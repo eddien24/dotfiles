@@ -67,11 +67,10 @@
                   eval "$(starship init zsh)"
     '';
 
-    loginExtra = ''
-      # Launch hyprland on TTY startup
+   loginExtra = ''
       if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-          exec hyprland
-      fi
-    '';
+         exec Hyprland
+     fi
+   '';
   };
 }
