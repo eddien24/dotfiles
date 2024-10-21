@@ -64,7 +64,7 @@
 
       # eza
       alias ls='eza --color=always --git --no-filesize --no-user --no-time --icons=always --long --no-permissions'
-      alias la='eza -lah --git --no-user --icons=always --color=always'
+      alias la='eza -lah --git --icons=always --color=always'
       alias tree='eza --tree'
 
       # trash
