@@ -67,10 +67,10 @@
                   eval "$(starship init zsh)"
     '';
 
-   loginExtra = ''
-      if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-         exec Hyprland
-     fi
-   '';
+    loginExtra = ''
+       if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+          exec Hyprland
+      fi
+    '';
   };
 }
