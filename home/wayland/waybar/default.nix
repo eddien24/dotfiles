@@ -61,6 +61,7 @@
 
         clock = {
           format = "<span> </span> {:%H:%M}";
+          tooltip-format = "<span>󰃭 </span> {:%m/%d/%y}";
         };
 
         battery = {
