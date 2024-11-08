@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  # home.packages = [pkgs.rnote];
+  home.packages = [pkgs.rnote];
 }
