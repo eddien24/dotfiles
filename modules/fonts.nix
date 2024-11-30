@@ -1,6 +1,7 @@
 {pkgs, ...}: {
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraMono" "JetBrainsMono"];})
+  fonts.packages = with pkgs.nerd-fonts; [
+    fira-mono
+    jetbrains-mono
   ];
   fonts.fontconfig.defaultFonts.monospace = ["FiraMono"];
 }
