@@ -6,6 +6,7 @@
 
     ../../modules/alias.nix
     ../../modules/bash.nix
+    ../../modules/bluetooth.nix
     ../../modules/dconf.nix
     ../../modules/docker.nix
     ../../modules/fonts.nix
