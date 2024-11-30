@@ -13,5 +13,6 @@
   boot.kernelParams = [
     "acpi_backlight=native"
     "i915.enable_dpcd_backlight=3"
+    "yama.ptrace_scope=0"
   ];
 }
