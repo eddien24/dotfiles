@@ -9,6 +9,7 @@
     ../../modules/bluetooth.nix
     ../../modules/dconf.nix
     ../../modules/docker.nix
+    ../../modules/firewall.nix
     ../../modules/fonts.nix
     ../../modules/home-manager.nix
     ../../modules/linger.nix
