@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixos-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,13 +13,8 @@
 
   outputs = inputs: let
     system = "x86_64-linux";
-    unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
-    xdphOverlay = final: prev: {
-      inherit (unstable-small-pkgs) xdg-desktop-portal-hyprland;
-    };
     pkgs = import inputs.nixpkgs {
       inherit system;
-      overlays = [xdphOverlay];
       config.allowUnfree = true;
     };
   in {
