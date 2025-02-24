@@ -6,6 +6,7 @@
     trash-cli
     rmtrash
     fd
+    man-pages
   ];
 
   programs = {
