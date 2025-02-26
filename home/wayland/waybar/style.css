@@ -1,71 +1,72 @@
 @import "./rose-pine-moon.css";
 
 * {
-	border-radius: 10px;
-	font-family: "JetBrains Mono Nerd Font" ;
-	font-size: 14px;
-	min-height: 8px;
+  border-radius: 10px;
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 14px;
+  min-height: 8px;
 }
 
 window#waybar {
-	background: transparent;
+  background: transparent;
 }
 
-#workspaces, label.module {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-    padding-right: 10px;
-	margin-bottom: 0px;
-	color: @text;
-	background: @base;
+#workspaces,
+label.module {
+  margin-top: 3px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  color: @text;
+  background: @base;
 }
 
 #custom-launcher {
-    font-size: 18px;
-    padding-left: 8px;
-    padding-right: 2px;
+  font-size: 18px;
+  padding-left: 8px;
+  padding-right: 2px;
 }
 
 #network {
-    padding-right: 18px;
+  padding-right: 18px;
 }
 
 #custom-power {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
 #battery.critical:not(.charging) {
-    background-color: @love;
-    color: @text;
+  background-color: @love;
+  color: @text;
 }
 
 #workspaces {
-    padding-left: 0px;
-    padding-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #workspaces button {
-	color: @text;
-	background: transparent;
-	border-radius: 2px;
+  color: @text;
+  background: transparent;
+  border-radius: 2px;
 }
 
 #workspaces button.occupied {
-	color: @rose;
-	background: transparent;
+  color: @rose;
+  background: transparent;
 }
 
 #workspaces button.active {
-	color: @rose;
+  color: @rose;
 }
 
 #workspaces button:hover {
-	box-shadow: inherit;
-    color: @pine;
-    border: transparent;
+  box-shadow: inherit;
+  color: @pine;
+  border: transparent;
 }
 
 #workspaces button.active:hover {
-	color: @foam;
+  color: @foam;
 }

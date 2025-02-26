@@ -9,8 +9,8 @@
     monitor = ", preferred, auto, 1.2";
 
     general = {
-      gaps_in = 5;
-      gaps_out = 10;
+      gaps_in = 3;
+      gaps_out = 3;
       border_size = 0;
 
       resize_on_border = true;
@@ -72,7 +72,7 @@
 
     # https://wiki.hyprland.org/Configuring/Variables/#misc
     misc = {
-      force_default_wallpaper = -1;
+      force_default_wallpaper = 0;
       disable_hyprland_logo = false;
     };
 
@@ -95,12 +95,5 @@
       workspace_swipe_invert = false;
       workspace_swipe_create_new = false;
     };
-
-    # Example per-device config
-    # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
-    # device {
-    #     name = epic-mouse-v1
-    #     sensitivity = -0.5
-    # }
   };
 }
