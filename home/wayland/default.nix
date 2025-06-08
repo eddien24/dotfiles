@@ -9,6 +9,7 @@
     ./rofi
     ./tools.nix
     ./unfree.nix
+    ./virt-manager.nix
     ./waybar
     ./zathura.nix
   ];

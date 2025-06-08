@@ -14,6 +14,7 @@
     ../../modules/home-manager.nix
     ../../modules/linger.nix
     ../../modules/nix
+    ../../modules/virt-manager.nix
     ../../modules/wayland.nix
     ../../modules/wireshark.nix
     ../../modules/zsh.nix
