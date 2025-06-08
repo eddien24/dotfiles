@@ -15,5 +15,6 @@
     ../../modules/home-manager.nix
     ../../modules/zsh.nix
     ../../modules/nix
+    ../../modules/ssh.nix
   ];
 }
