@@ -1,7 +1,7 @@
 {pkgs, ...}: {
-  environment.variables.FLAKE = "/home/eddie/.dotfiles/";
   programs.nh = {
     enable = true;
+    flake = "/home/eddie/.dotfiles/"; 
     clean = {
       enable = true;
       dates = "daily";
