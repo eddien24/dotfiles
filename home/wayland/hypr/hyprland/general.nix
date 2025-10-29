@@ -90,10 +90,13 @@
 
     # https://wiki.hyprland.org/Configuring/Variables/#gestures
     gestures = {
-      workspace_swipe = true;
       workspace_swipe_distance = 200;
       workspace_swipe_invert = false;
       workspace_swipe_create_new = false;
     };
+
+    gesture = [
+      "3,horizontal,workspace"
+    ];
   };
 }
