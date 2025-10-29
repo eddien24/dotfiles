@@ -31,7 +31,6 @@
       less = "bat";
       diff = "batdiff";
       man = "batman";
-      grep = "batgrep -i";
       icat = "kitten icat";
       s = "kitten ssh";
     };
