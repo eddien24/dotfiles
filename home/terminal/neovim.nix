@@ -8,7 +8,7 @@
       lua-language-server
       nodePackages.prettier
       texlab
-      perl538Packages.LatexIndent
+      perl5Packages.LatexIndent
     ];
     plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
