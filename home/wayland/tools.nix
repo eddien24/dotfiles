@@ -11,5 +11,6 @@
     webcord
     calibre
     xorg.xhost
+    vscode
   ];
 }
