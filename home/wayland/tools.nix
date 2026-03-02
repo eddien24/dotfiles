@@ -9,7 +9,7 @@
     brightnessctl
     playerctl
     webcord
-    calibre
+    # calibre
     xorg.xhost
     vscode
   ];
