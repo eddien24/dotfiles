@@ -8,7 +8,6 @@
     wl-gammarelay-rs
     brightnessctl
     playerctl
-    webcord
     # calibre
     xorg.xhost
     vscode
