@@ -1,9 +1,9 @@
-{pkgs, ...}: {
+{pkgs, config, ...}: {
   home.packages = [pkgs.zsh-fzf-tab];
 
   programs.zsh = {
     enable = true;
-    dotDir = ".config/zsh";
+    dotDir = config.xdg.configHome + "/zsh";
 
     history = {
       ignoreAllDups = true;
@@ -35,7 +35,7 @@
       s = "kitten ssh";
     };
 
-    initExtra = ''
+    initContent = ''
       # Source plugins
                 source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
 

@@ -1,11 +1,13 @@
 {pkgs, ...}: {
   programs.git = {
     enable = true;
-    extraConfig = {
+    settings = {
       credential.helper = "store";
       init.defaultBranch = "main";
+      user = {
+          name = "Eddie Nguyen";
+          email = "edward_nguyen@brown.edu"; 
+      };
     };
-    userEmail = "edward_nguyen@brown.edu";
-    userName = "Eddie Nguyen";
   };
 }
