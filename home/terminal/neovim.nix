@@ -6,7 +6,7 @@
       gcc
       unzip
       lua-language-server
-      nodePackages.prettier
+      prettier
       texlab
       perl5Packages.LatexIndent
     ];

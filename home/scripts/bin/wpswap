@@ -3,6 +3,6 @@
 pushd ~/.wallpapers >/dev/null
 
 file="$(ls -1 | shuf -n 1)"
-swww img "$file" --transition-duration 5 --transition-type fade --transition-fps 60
+awww img "$file" --transition-duration 5 --transition-type fade --transition-fps 60
 
 popd >/dev/null

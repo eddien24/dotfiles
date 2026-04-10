@@ -4,7 +4,7 @@
     grim
     slurp
     cliphist
-    swww
+    awww
     wl-gammarelay-rs
     brightnessctl
     playerctl

@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
-      "swww-daemon"
+      "awww-daemon"
       "waybar"
       "mako"
       "wl-gammarelay-rs"

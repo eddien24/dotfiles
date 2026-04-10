@@ -73,7 +73,7 @@
 
       # New wallpaper
       "SUPER, W, exec, wpswap"
-      "SUPER SHIFT, W, exec, pkill swww && swww-daemon"
+      "SUPER SHIFT, W, exec, pkill awww && swww-daemon"
     ];
 
     binde = [
