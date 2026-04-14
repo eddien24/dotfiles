@@ -13,6 +13,7 @@ if git diff --quiet .; then
     exit 0
 fi
 
+nix flake update
 batdiff .
 git add . 
 
