@@ -9,12 +9,19 @@
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    tree-sitter = {
+      url = "github:tree-sitter/tree-sitter/v0.26.8";
+    };
   };
 
   outputs = inputs: let
     system = "x86_64-linux";
+    treeSitterOverlay = final: prev: {
+      tree-sitter-latest = inputs.tree-sitter.packages.${prev.system}.default;
+    };
     pkgs = import inputs.nixpkgs {
       inherit system;
+      overlays = [treeSitterOverlay];
       config.allowUnfree = true;
     };
   in {
@@ -24,6 +31,7 @@
         specialArgs = {inherit inputs pkgs;};
         modules = [
           ./hosts/gbook
+          {nixpkgs.overlays = [treeSitterOverlay];}
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

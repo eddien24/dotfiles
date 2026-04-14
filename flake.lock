@@ -94,11 +94,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775900011,
-        "narHash": "sha256-QUGu6CJYFQ5AWVV0n3/FsJyV+1/gj7HSDx68/SX9pwM=",
+        "lastModified": 1776184304,
+        "narHash": "sha256-No6QGBmIv5ChiwKCcbkxjdEQ/RO2ZS1gD7SFy6EZ7rc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b0569dc6ec1e6e7fefd8f6897184e4c191cd768e",
+        "rev": "3c7524c68348ef79ce48308e0978611a050089b2",
         "type": "github"
       },
       "original": {
@@ -182,11 +182,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1775916519,
-        "narHash": "sha256-tiPb/jSJX9fWuXFJGkBJfYLD/dowwpWq4eEsHCBIt2k=",
+        "lastModified": 1776115177,
+        "narHash": "sha256-dT0tPs0I2+jNRv1sCu9spKxqouZTa+dThqc56fQ7Mik=",
         "ref": "refs/heads/main",
-        "rev": "dbc07064ef27aa4b3f3fc9310bed60454052f013",
-        "revCount": 7142,
+        "rev": "e539d21174211dad3fa5f8f5e8496bb7e5c7baf2",
+        "revCount": 7150,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/hyprwm/Hyprland"
@@ -495,6 +495,22 @@
         "type": "indirect"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1756787288,
+        "narHash": "sha256-rw/PHa1cqiePdBxhF66V7R+WAP8WekQ0mCDG4CFqT8Y=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d0fc30899600b9b3466ddb260fd83deb486c32f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -523,7 +539,8 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "nixos-wsl": "nixos-wsl",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "tree-sitter": "tree-sitter"
       }
     },
     "systems": {
@@ -538,6 +555,25 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "tree-sitter": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1774978270,
+        "narHash": "sha256-fcFEfoALrbpBD6rWogxJ7FNVlvDQgswoX9ylRgko+8Q=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter",
+        "rev": "cd5b087cd9f45ca6d93ab1954f6b7c8534f324d2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "ref": "v0.26.8",
+        "repo": "tree-sitter",
         "type": "github"
       }
     },

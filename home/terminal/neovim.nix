@@ -10,8 +10,9 @@
       texlab
       perl5Packages.LatexIndent
     ];
-    plugins = with pkgs.vimPlugins; [
-      nvim-treesitter.withAllGrammars
-    ];
   };
+
+  home.packages = with pkgs; [
+    tree-sitter-latest
+  ];
 }
