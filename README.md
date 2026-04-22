@@ -4,7 +4,7 @@ NixOS dotfiles for my laptop and WSL2.
 
 - Neovim configuration at [eddien24/nvim](https://github.com/eddien24/nvim)
 - Wallpapers at [eddien24/wallpapers](https://github.com/eddien24/wallpapers)
-- Need to manually add `tpm` to install packages. Use `<prefix>-I` when inside
+- Need to manually add `tpm` to install `tmux` packages. Use `<prefix>-I` when inside
   of `tmux` to install packages.
 
 ```bash

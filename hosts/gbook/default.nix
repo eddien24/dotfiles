@@ -12,6 +12,7 @@
     ../../modules/firewall.nix
     ../../modules/fonts.nix
     ../../modules/home-manager.nix
+    ../../modules/keyboard.nix
     ../../modules/linger.nix
     ../../modules/nix
     ../../modules/power.nix
