@@ -9,5 +9,6 @@
         email = "edward_nguyen@brown.edu";
       };
     };
+    signing.format = "openpgp";
   };
 }
