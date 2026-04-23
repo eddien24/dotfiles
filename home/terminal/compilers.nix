@@ -1,7 +1,10 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    gcc # For treesitter
-    rustup # For `cargo new`
+    nodejs_25
+    gnumake
+    cargo
+    rustc
+    gcc
     python313
   ];
 }

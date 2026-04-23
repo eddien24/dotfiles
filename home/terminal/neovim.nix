@@ -1,18 +1,11 @@
 {pkgs, ...}: {
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    extraPackages = with pkgs; [
-      gcc
-      unzip
-      lua-language-server
-      prettier
-      texlab
-      perl5Packages.LatexIndent
-    ];
-  };
-
   home.packages = with pkgs; [
+    neovim
+    unzip
+    prettier
+    texlab
+    perl5Packages.LatexIndent
     tree-sitter-latest
   ];
+  home.sessionVariables.EDITOR = "nvim";
 }
