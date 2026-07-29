@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    nodejs_25
+    nodejs_22
     gnumake
     cargo
     rustc

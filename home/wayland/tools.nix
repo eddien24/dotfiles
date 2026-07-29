@@ -11,5 +11,6 @@
     # calibre
     xhost
     vscode
+    zotero
   ];
 }

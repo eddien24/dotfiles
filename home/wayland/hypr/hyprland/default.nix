@@ -6,8 +6,13 @@
     ./start.nix
   ];
 
-  wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland = {
+    enable = true;
+    configType = "lua";
+  };
+
   home.packages = [
     pkgs.xdg-desktop-portal-hyprland
+    pkgs.hyprshutdown
   ];
 }

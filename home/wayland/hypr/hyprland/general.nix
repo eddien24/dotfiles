@@ -1,102 +1,79 @@
-{pkgs, ...}: {
+{
   wayland.windowManager.hyprland.settings = {
-    env = [
-      "XCURSOR_SIZE, 64"
-      "HYPRCURSOR_THEME, McMojave"
-      "HYPRCURSOR_SIZE, 32"
+    monitor = [
+      {
+        output = "";
+        mode = "preferred";
+        position = "auto";
+        scale = "1.2";
+      }
     ];
 
-    monitor = ", preferred, auto, 1.2";
-
-    general = {
-      gaps_in = 3;
-      gaps_out = 3;
-      border_size = 0;
-
-      resize_on_border = true;
-      allow_tearing = false;
-      layout = "dwindle";
-    };
-
-    # https://wiki.hyprland.org/Configuring/Variables/#decoration
-    decoration = {
-      rounding = 10;
-
-      # Change transparency of focused and unfocused windows
-      active_opacity = 1;
-      inactive_opacity = 0.9;
-
-      shadow = {
-        range = 4;
-        render_power = 3;
-        color = "rgba(1a1a1aee)";
+    config = {
+      general = {
+        gaps_in = 3;
+        gaps_out = 3;
+        border_size = 0;
+        resize_on_border = true;
+        allow_tearing = false;
+        layout = "dwindle";
       };
 
-      # https://wiki.hyprland.org/Configuring/Variables/#blur
-      blur = {
-        enabled = true;
-        size = 3;
-        passes = 1;
+      decoration = {
+        rounding = 10;
+        active_opacity = 1.0;
+        inactive_opacity = 0.9;
 
-        vibrancy = 0.1696;
+        shadow = {
+          enabled = true;
+          range = 4;
+          render_power = 3;
+          color = "0x1a1a1aee";
+        };
+
+        blur = {
+          enabled = true;
+          size = 3;
+          passes = 1;
+          vibrancy = 0.1696;
+        };
       };
-    };
 
-    # https://wiki.hyprland.org/Configuring/Variables/#animations
-    animations = {
-      enabled = true;
-
-      # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
-      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-
-      animation = [
-        "windows, 1, 7, myBezier"
-        "windowsOut, 1, 7, default, popin 80%"
-        "border, 1, 10, default"
-        "borderangle, 1, 8, default"
-        "fade, 1, 7, default"
-        "workspaces, 1, 6, default"
-      ];
-    };
-
-    # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-    dwindle = {
-      pseudotile = true;
-      preserve_split = true;
-    };
-
-    # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-    master = {
-      new_status = "master";
-    };
-
-    # https://wiki.hyprland.org/Configuring/Variables/#misc
-    misc = {
-      force_default_wallpaper = 0;
-      disable_hyprland_logo = false;
-    };
-
-    # https://wiki.hyprland.org/Configuring/Variables/#input
-    input = {
-      kb_layout = "us";
-      follow_mouse = 1;
-      sensitivity = 0;
-
-      touchpad = {
-        natural_scroll = false;
-        clickfinger_behavior = 1;
+      misc = {
+        force_default_wallpaper = 0;
+        disable_hyprland_logo = false;
       };
-    };
 
-    # https://wiki.hyprland.org/Configuring/Variables/#gestures
-    gestures = {
-      workspace_swipe_distance = 200;
-      workspace_swipe_invert = false;
-      workspace_swipe_create_new = false;
+      input = {
+        kb_layout = "us";
+        kb_variant = "";
+        kb_model = "";
+        kb_options = "";
+        kb_rules = "";
+        follow_mouse = 1;
+        sensitivity = 0;
+        touchpad = {
+          natural_scroll = false;
+        };
+      };
+
+      gestures = {
+        workspace_swipe_distance = 200;
+        workspace_swipe_invert = false;
+        workspace_swipe_create_new = false;
+      };
+
+      dwindle = {
+        preserve_split = true;
+      };
     };
 
     gesture = [
-      "3,horizontal,workspace"
+      {
+        fingers = 3;
+        direction = "horizontal";
+        action = "workspace";
+      }
     ];
   };
 }

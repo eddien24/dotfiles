@@ -1,4 +1,7 @@
 {pkgs, ...}: {
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    configPath = ".mozilla/firefox";
+  };
   home.packages = [pkgs.brave];
 }

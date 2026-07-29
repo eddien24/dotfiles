@@ -1,7 +1,14 @@
-{pkgs, ...}: {
+{
   wayland.windowManager.hyprland.settings = {
-    windowrule = [
-      "suppress_event maximize, match:class .*"
+    window_rule = [
+      {
+        _args = [
+          {
+            match = {class = ".*";};
+            suppress_event = "maximize";
+          }
+        ];
+      }
     ];
   };
 }

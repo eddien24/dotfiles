@@ -1,96 +1,81 @@
-{pkgs, ...}: {
-  wayland.windowManager.hyprland.settings = {
-    bind = [
-      # defaults
-      "SUPER, Q, exec, kitty"
-      "SUPER, C, killactive"
-      "SUPER, M, exit"
-      "SUPER, V, togglefloating"
-      "SUPER, R, exec, rofi -show drun -show-icons"
+{lib, ...}: let
+  lua = lib.generators.mkLuaInline;
 
-      # move with arrow keys
-      "SUPER, left, movefocus, l"
-      "SUPER, right, movefocus, r"
-      "SUPER, up, movefocus, u"
-      "SUPER, down, movefocus, d"
+  bind = keys: dispatcher: {_args = [keys dispatcher];};
+  mouseBind = keys: dispatcher: {_args = [keys dispatcher {mouse = true;}];};
+
+  dsp = {
+    exec = cmd: lua ''hl.dsp.exec_cmd("${cmd}")'';
+    close = lua "hl.dsp.window.close()";
+    focus = dir: lua ''hl.dsp.focus({ direction = "${dir}" })'';
+    focusWorkspace = ws: lua ''hl.dsp.focus({ workspace = "${toString ws}" })'';
+    moveToWorkspace = ws: lua ''hl.dsp.window.move({ workspace = "${toString ws}", follow = false })'';
+    drag = lua "hl.dsp.window.drag()";
+    resize = lua "hl.dsp.window.resize()";
+  };
+in {
+  wayland.windowManager.hyprland.settings.bind =
+    [
+      (bind "SUPER + Q" (dsp.exec "kitty"))
+      (bind "SUPER + C" dsp.close)
+      (bind "SUPER + M" (dsp.exec "hyprshutdown"))
+      (bind "SUPER + R" (dsp.exec "rofi -show drun -show-icons"))
 
       # move with HJKL
-      "SUPER, H, movefocus, l"
-      "SUPER, J, movefocus, d"
-      "SUPER, K, movefocus, u"
-      "SUPER, L, movefocus, r"
+      (bind "SUPER + H" (dsp.focus "left"))
+      (bind "SUPER + L" (dsp.focus "right"))
+      (bind "SUPER + K" (dsp.focus "up"))
+      (bind "SUPER + J" (dsp.focus "down"))
 
-      # Switch workspaces
-      "SUPER, 1, workspace, 1"
-      "SUPER, 2, workspace, 2"
-      "SUPER, 3, workspace, 3"
-      "SUPER, 4, workspace, 4"
-      "SUPER, 5, workspace, 5"
-      "SUPER, 6, workspace, 6"
-      "SUPER, 7, workspace, 7"
-      "SUPER, 8, workspace, 8"
-      "SUPER, 9, workspace, 9"
-      "SUPER, 0, workspace, 10"
+      # launch firefox
+      (bind "SUPER + F" (dsp.exec "firefox -p personal"))
+      (bind "SUPER + SHIFT + F" (dsp.exec "firefox -p school"))
 
-      # Move active window to a workspace with SUPER + SHIFT + [0-9]
-      "SUPER SHIFT, 1, movetoworkspacesilent, 1"
-      "SUPER SHIFT, 2, movetoworkspacesilent, 2"
-      "SUPER SHIFT, 3, movetoworkspacesilent, 3"
-      "SUPER SHIFT, 4, movetoworkspacesilent, 4"
-      "SUPER SHIFT, 5, movetoworkspacesilent, 5"
-      "SUPER SHIFT, 6, movetoworkspacesilent, 6"
-      "SUPER SHIFT, 7, movetoworkspacesilent, 7"
-      "SUPER SHIFT, 8, movetoworkspacesilent, 8"
-      "SUPER SHIFT, 9, movetoworkspacesilent, 9"
-      "SUPER SHIFT, 0, movetoworkspacesilent, 10"
+      # screenshot
+      (bind "SUPER + S" (dsp.exec "screenshot"))
 
-      # Scroll through existing workspaces with SUPER + scroll
-      "SUPER, mouse_down, workspace, e+1"
-      "SUPER, mouse_up, workspace, e-1"
-
-      # Shortcuts to launch programs
-      "SUPER, F, exec, firefox -p personal"
-      "SUPER SHIFT, F, exec, firefox -p school"
-
-      # Screenshot & copy to clipboard
-      "SUPER, S, exec, screenshot"
-
-      # Night light toggle
-      "SUPER, N, exec, busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
-      "SUPER SHIFT, N, exec, busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 4000"
+      # toggle night light
+      (bind "SUPER + N" (dsp.exec "busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"))
+      (bind "SUPER + SHIFT + N" (dsp.exec "busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 4000"))
 
       # Restart Waybar
-      "SUPER, P, exec, pkill waybar && waybar"
+      (bind "SUPER + P" (dsp.exec "pkill waybar && waybar"))
 
       # Power menu
-      "SUPER, U, exec, rofi -show menu -modi 'menu:powermenu --choices=shutdown/reboot'"
+      (bind "SUPER + U" (dsp.exec "rofi -show menu -modi 'menu:powermenu --choices=shutdown/reboot'"))
 
       # Lockscreen (SUPER + ;)
-      "SUPER, code:47, exec, pidof hyprlock || hyprlock > /dev/null"
+      (bind "SUPER + code:47" (dsp.exec "pidof hyprlock || hyprlock > /dev/null"))
 
       # Clipboard history
-      "SUPER, X, exec, rofi -modi clipboard:cliphist-rofi -show clipboard -show-icons"
+      (bind "SUPER + X" (dsp.exec "rofi -modi clipboard:cliphist-rofi -show clipboard -show-icons"))
 
       # New wallpaper
-      "SUPER, W, exec, wpswap"
-      "SUPER SHIFT, W, exec, pkill awww && swww-daemon"
-    ];
+      (bind "SUPER + W" (dsp.exec "wpswap"))
+      (bind "SUPER + SHIFT + W" (dsp.exec "pkill awww && swww-daemon"))
 
-    binde = [
-      # Volume control
-      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-      ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
-      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      (bind "XF86AudioRaiseVolume" (dsp.exec "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"))
+      (bind "XF86AudioLowerVolume" (dsp.exec "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"))
+      (bind "XF86AudioMute" (dsp.exec "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
 
       # Brightness control
-      ", XF86MonBrightnessDown, exec, brightnessctl set 20-"
-      ", XF86MonBrightnessUp, exec, brightnessctl set +20"
-    ];
+      (bind "XF86MonBrightnessDown" (dsp.exec "brightnessctl set 20-"))
+      (bind "XF86MonBrightnessUp" (dsp.exec "brightnessctl set +20"))
 
-    bindm = [
-      # Move/resize windows with SUPER + LMB/RMB and dragging
-      "SUPER, mouse:272, movewindow"
-      "SUPER, mouse:273, resizewindow"
-    ];
-  };
+      # Mouse Binds
+      (mouseBind "SUPER + mouse:272" dsp.drag)
+      (mouseBind "SUPER + mouse:273" dsp.resize)
+
+      # 0 for workspace 10
+      (bind "SUPER + 0" (dsp.focusWorkspace "10"))
+      (bind "SUPER + SHIFT + 0" (dsp.moveToWorkspace "10"))
+    ]
+    ++ (lib.concatMap (
+      i: let
+        ws = toString i;
+      in [
+        (bind "SUPER + ${ws}" (dsp.focusWorkspace ws))
+        (bind "SUPER + SHIFT + ${ws}" (dsp.moveToWorkspace ws))
+      ]
+    ) (lib.range 1 9));
 }
