@@ -54,6 +54,7 @@
         sensitivity = 0;
         touchpad = {
           natural_scroll = false;
+          clickfinger_behavior = true;
         };
       };
 
