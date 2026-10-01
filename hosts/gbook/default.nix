@@ -17,8 +17,8 @@
     ../../modules/nix
     ../../modules/power.nix
     ../../modules/ssh.nix
-    ../../modules/steam.nix
-    ../../modules/virt-manager.nix
+    # ../../modules/steam.nix
+    # ../../modules/virt-manager.nix
     ../../modules/wayland.nix
     ../../modules/wireshark.nix
     ../../modules/zsh.nix
