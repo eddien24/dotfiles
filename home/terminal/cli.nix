@@ -11,7 +11,10 @@
 
   programs = {
     eza.enable = true;
-    fzf.enable = true;
+    fzf = {
+      enable = true;
+      enableNushellIntegration = false;
+    };
     ripgrep.enable = true;
     zoxide.enable = true;
   };

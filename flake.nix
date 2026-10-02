@@ -2,7 +2,8 @@
   description = "System Configuration for NixOS laptop & WSL";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-26.05";
+    nixpkgs-zotero.url = "github:NixOS/nixpkgs/b2433d29596bc700a008ba0c70aa1659e7595b0c";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,9 +20,16 @@
     treeSitterOverlay = final: prev: {
       tree-sitter-latest = inputs.tree-sitter.packages.${prev.system}.default;
     };
+    zoteroOverlay = final: prev: {
+      zotero =
+        (import inputs.nixpkgs-zotero {
+          inherit system;
+          config.allowUnfree = true;
+        }).zotero;
+    };
     pkgs = import inputs.nixpkgs {
       inherit system;
-      overlays = [treeSitterOverlay];
+      overlays = [treeSitterOverlay zoteroOverlay];
       config.allowUnfree = true;
     };
   in {
@@ -31,7 +39,7 @@
         specialArgs = {inherit inputs pkgs;};
         modules = [
           ./hosts/gbook
-          {nixpkgs.overlays = [treeSitterOverlay];}
+          {nixpkgs.overlays = [treeSitterOverlay zoteroOverlay];}
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
