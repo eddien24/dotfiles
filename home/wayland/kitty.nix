@@ -11,6 +11,9 @@
        map ctrl+shift+l neighboring_window right
 
        map ctrl+shift+enter new_window_with_cwd
+
+       # stop from always opening fullscreen
+       remember_window_size no
     '';
   };
 }
