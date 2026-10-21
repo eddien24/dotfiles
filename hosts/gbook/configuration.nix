@@ -28,6 +28,8 @@
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  # clean up all processes on stop
+  systemd.services.rtkit-daemon.serviceConfig.KillMode = "control-group";
   services.pipewire = {
     enable = true;
     alsa.enable = true;
