@@ -15,6 +15,7 @@
     ../../modules/keyboard.nix
     ../../modules/linger.nix
     ../../modules/nix
+    ../../modules/openvpn.nix 
     ../../modules/power.nix
     ../../modules/ssh.nix
     # ../../modules/steam.nix
