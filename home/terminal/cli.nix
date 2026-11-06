@@ -7,6 +7,7 @@
     rmtrash
     fd
     man-pages
+    mosh
   ];
 
   programs = {
