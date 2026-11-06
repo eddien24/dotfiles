@@ -12,5 +12,6 @@
     xhost
     vscode
     zotero
+    foot
   ];
 }
